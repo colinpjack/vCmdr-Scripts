@@ -8,10 +8,7 @@ function Post-ToSlack
 
             Tested with vCommander 6.1.1 using the following execute script step commandline:
 
-            powershell.exe c:\scripts\Post2Slack.ps1 '"#channel"'  '":+1:Recently Deployed VM/Instance: #{target.Name} on #{target.managedSystem.type}, has its IP set to #{target.ipAddress}"'
-
-
-            .DESCRIPTION
+            powershell.exe c:\scripts\Post2Slack.ps1 '"#channel"'  '":+1:Recently Deployed VM/Instance: #{target.Name} on #{target.managedSystem.type}, has its IP set to #{target.ipAddress}"'            .DESCRIPTION
             The Post-ToSlack cmdlet is used to send a chat message to a Slack channel, group, or person.
             Slack requires a token to authenticate to an org. Either place a file named token.txt in the same directory as this cmdlet,
             or provide the token using the -token parameter. For more details on Slack tokens, use Get-Help with the -Full arg.  Thanks to Chris Wahl for the example code.
