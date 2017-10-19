@@ -29,10 +29,10 @@ write-host "Updating vCommander Portal Colors"
 (Get-Content c:\repo\vCmdrScripts\ui.custom.orig612) | 
 Foreach-Object {$_ -replace 'F16531',$backgroundColor}
                {$_ -replace 'FF6E2A',$contentColor}  | 
-Out-File c:\repo\vCmdr-Scripts\output\ui.custom.css
+Out-File c:\repo\vCmdr-Scripts\ui.custom.css
 
 (Get-Content c:\repo\vCmdrScripts\ui.theme.orig612) | 
 Foreach-Object {$_ -replace 'F16531',$backgroundColor}
                {$_ -replace 'FF6E2A',$contentColor}  | 
-Out-File c:\repo\vCmdr-Scripts\output\ui.theme.css
+Out-File c:\repo\vCmdr-Scripts\ui.theme.css
 
