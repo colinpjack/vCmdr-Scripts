@@ -29,7 +29,7 @@ write-host "Command =" $contentColor
 #########################################################
 
 (Get-Content c:\Scripts\repo\Theme\ui.custom.css.orig612) | 
-Foreach-Object {$_ -replace 'F16531',$backgroundColor},
+Foreach-Object {$_ -replace 'F16351',$backgroundColor},
                {$_ -replace 'ff6e2a',$contentColor} |
 Out-File c:\Scripts\repo\Theme\ui.custom.css
 
