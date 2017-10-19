@@ -21,18 +21,28 @@ if(-not($ContentColor)) { Throw "You must supply a value for -contentColor" }
 
 ########## Edit For your Environment ##########
 write-host "Updating vCommander Portal Colors"
+write-host "Background =" $backgroundColor
+write-host "Command =" $contentColor
 
 #########################################################
 ### Do Not edit below this line
 #########################################################
 
-(Get-Content c:\repo\vCmdrScripts\ui.custom.orig612) | 
-Foreach-Object {$_ -replace 'F16531',$backgroundColor}
-               {$_ -replace 'FF6E2A',$contentColor}  | 
-Out-File c:\repo\vCmdr-Scripts\ui.custom.css
+(Get-Content c:\Scripts\repo\Theme\ui.custom.css.orig612) | 
+Foreach-Object {$_ -replace 'F16531',$backgroundColor},
+               {$_ -replace 'ff6e2a',$contentColor} |
+Out-File c:\Scripts\repo\Theme\ui.custom.css
 
-(Get-Content c:\repo\vCmdrScripts\ui.theme.orig612) | 
-Foreach-Object {$_ -replace 'F16531',$backgroundColor}
-               {$_ -replace 'FF6E2A',$contentColor}  | 
-Out-File c:\repo\vCmdr-Scripts\ui.theme.css
+(Get-Content c:\Scripts\repo\Theme\ui.theme.css.orig612) | 
+Foreach-Object {$_ -replace 'E6E6E6',$backgroundColor},
+               {$_ -replace 'ff6e2a',$contentColor} |
+Set-content c:\Scripts\repo\Theme\ui.theme.css
+
+
+cp C:\Scripts\repo\Theme\ui.custom.css C:\progra~1\Embotics\vCommander\tomcat\webapps\portal\resources\css\ui.custom.css -force
+write-host "Replaced ui.custom.css"
+cp C:\Scripts\repo\Theme\ui.theme.css C:\progra~1\Embotics\vCommander\tomcat\webapps\portal\resources\css\ui.theme.css -force
+write-host "Replaced ui.theme.css"
+#Restart-Service vCommmander
+
 
