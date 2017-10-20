@@ -15,9 +15,10 @@
            
 
 #>
-Param([string]$backgroundColor, [string]$contentColor)
+Param([string]$backgroundColor, [string]$contentColor, [string]$loginPanelColor)
 if(-not($backgroundColor)) { Throw "You must supply a value for -backgroundColor" }
 if(-not($contentColor)) { Throw "You must supply a value for -contentColor" }
+if(-not($loginPaneltColor)) { Throw "You must supply a value for -loginPanelColor" }
 
 ########## Edit For your Environment ##########
 write-host "Updating vCommander Portal Colors"
@@ -28,12 +29,28 @@ write-host "Command =" $contentColor
 ### Do Not edit below this line
 #########################################################
 
+
+##Top Banner##
+
 (Get-Content c:\Scripts\repo\Theme\ui.custom.css.orig612) | 
 Foreach-Object {$_ -replace 'ff6e2a',$contentColor} |
 Out-File c:\Scripts\repo\Theme\ui.custom.css
 
+
+## Login Backgroud ##
 (Get-Content c:\Scripts\repo\Theme\ui.custom.css) | 
 Foreach-Object {$_ -replace 'F16531',$backgroundColor} |
+Out-File c:\Scripts\repo\Theme\ui.custom.css
+
+## Login panel##
+(Get-Content c:\Scripts\repo\Theme\ui.custom.css) | 
+Foreach-Object {$_ -replace 'body.login-screen #loginForm\:loginPanel{
+	min-height:340px;
+	margin:20px auto;
+	background: #FFFFFF;','body.login-screen #loginForm\:loginPanel{
+	min-height:340px;
+	margin:20px auto;
+	background: #'$loginPanelColor';'} |
 Out-File c:\Scripts\repo\Theme\ui.custom.css
 
 
