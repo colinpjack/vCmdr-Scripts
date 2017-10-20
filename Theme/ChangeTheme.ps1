@@ -18,7 +18,7 @@
 Param([string]$backgroundColor, [string]$contentColor, [string]$loginPanelColor)
 if(-not($backgroundColor)) { Throw "You must supply a value for -backgroundColor" }
 if(-not($contentColor)) { Throw "You must supply a value for -contentColor" }
-if(-not($loginPaneltColor)) { Throw "You must supply a value for -loginPanelColor" }
+if(-not($loginPanelColor)) { Throw "You must supply a value for -loginPanelColor" }
 
 ########## Edit For your Environment ##########
 write-host "Updating vCommander Portal Colors"
