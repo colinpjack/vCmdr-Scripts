@@ -44,13 +44,7 @@ Set-content c:\Scripts\repo\Theme\ui.custom.css
 
 ## Login panel##
 (Get-Content c:\Scripts\repo\Theme\ui.custom.css) | 
-Foreach-Object {$_ -replace 'body.login-screen #loginForm\:loginPanel{
-	min-height:340px;
-	margin:20px auto;
-	background: #FFFFFF;','body.login-screen #loginForm\:loginPanel{
-	min-height:340px;
-	margin:20px auto;
-	background: #'$loginPanelColor;} |
+Foreach-Object {$_ -replace 'background: #FFFFFF' , 'background: #'$loginPanelColor} |
 Set-content c:\Scripts\repo\Theme\ui.custom.css
 
 
