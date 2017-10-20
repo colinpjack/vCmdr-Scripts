@@ -40,12 +40,12 @@ Out-File c:\Scripts\repo\Theme\ui.custom.css
 ## Login Backgroud ##
 (Get-Content c:\Scripts\repo\Theme\ui.custom.css) | 
 Foreach-Object {$_ -replace 'F16531',$backgroundColor} |
-Out-File c:\Scripts\repo\Theme\ui.custom.css
+Set-content c:\Scripts\repo\Theme\ui.custom.css
 
 ## Login panel##
 (Get-Content c:\Scripts\repo\Theme\ui.custom.css) | 
-Foreach-Object {$_ -replace 'FFFFFF','$loginPanelColor} |
-Out-File c:\Scripts\repo\Theme\ui.custom.css
+Foreach-Object {$_ -replace 'FFFFFF',$loginPanelColor} |
+Set-content c:\Scripts\repo\Theme\ui.custom.css
 
 
 (Get-Content c:\Scripts\repo\Theme\ui.theme.css.orig612) | 
