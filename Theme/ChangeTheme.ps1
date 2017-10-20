@@ -50,7 +50,7 @@ Foreach-Object {$_ -replace 'body.login-screen #loginForm\:loginPanel{
 	background: #FFFFFF;','body.login-screen #loginForm\:loginPanel{
 	min-height:340px;
 	margin:20px auto;
-	background: #'$loginPanelColor';'} |
+	background: #'$loginPanelColor;} |
 Set-content c:\Scripts\repo\Theme\ui.custom.css
 
 
