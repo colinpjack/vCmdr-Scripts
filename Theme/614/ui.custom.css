@@ -1,0 +1,971 @@
+@import url('ui.core.css') screen;
+/*************************************************************************
+ *
+ *  Copyright (c) 2007-2015 Embotics Corporation. All Rights Reserved.
+ *
+ *  No part of this software may be reproduced, used in any
+ *  information storage and retrieval system, or transmitted in
+ *  any form or by any means, electronic, mechanical or otherwise,
+ *  without the written permission of Embotics Corporation.
+ */ 
+ 
+/**
+	Styles for specific parts of UI that need to be somewhat different from general theme
+	Example: main navigation menu vs menu in general 
+
+*/
+
+/***********************************************************
+     LOGIN SCREEN
+************************************************************/
+body.login-screen{
+	background: #F16531 url('images/checker-bkg.png') repeat-x 0 -100px;
+}
+
+body.login-screen #loginForm\:login-header{
+	
+}
+body.login-screen #loginForm\:logo-container{
+	/*background: url('images/embotics-logo.svg') no-repeat center center;*/
+	background-size:contain;
+	height:60px;
+	margin:0px auto;
+}
+body.login-screen #loginForm\:loginPanel{
+	min-height:340px;
+	margin:20px auto;
+	background: #FFFFFF;
+	
+}
+
+body.login-screen #loginForm\:login-messages{
+	min-height:80px;	
+	overflow:hidden;
+}
+
+body.login-screen #loginForm\:login-content input{
+	width:155px;
+	color:#333333;	
+}
+
+body.login-screen #loginForm\:login-footer{
+	text-align:center;
+}
+
+body.login-screen .ui-shadow{
+	box-shadow: 0px 3px 10px #999;
+}
+
+body.login-screen #loginForm\:loginPanel button.login-button .ui-button-icon-left{
+	left:0px;
+	float:left;
+	font-size:1.6em;
+	margin-top:0px;
+}
+
+body.login-screen #loginForm\:loginPanel button.login-button.ui-button-text-icon-left .ui-button-text{
+	padding: 2px 8px 2px 0px;
+	font-size:14px;
+	display:inline-block !important;
+}
+
+body.login-screen #loginForm\:loginPanel button.login-button.ui-state-default{
+	background:#000; /*#FF6E2A;*/
+	width:200px;
+}
+
+body.login-screen #loginForm\:loginPanel button.login-button.ui-state-hover{
+	background: #FF6E2A;
+}
+
+body.login-screen #loginForm\:footer{
+	color:#FFFFFF;
+	font-size:0.8em;
+}
+
+body.login-screen .powered-by{
+	background-image: url('../../images/embotics-logo-bg-lite.svg');
+	width: 120px;
+	height: 40px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin:0 auto 15px;
+}
+
+@media (min-width: 376px){
+	body.login-screen #loginForm\:loginPanel{
+		min-height:400px;
+		margin:0px auto;
+	}
+	body.login-screen #loginForm\:logo-container{
+		width:340px;
+		height: 120px;
+		margin-top: 55px;
+	}
+	body.login-screen #loginForm\:login-content{
+		height:auto;
+		padding:20px 30px 5px 50px;
+	}
+	body.login-screen #loginForm\:login-footer{
+		width:340px;
+		padding: 10px 60px 10px 60px;
+	}
+	body.login-screen #loginForm\:loginPanel button.login-button .ui-button-icon-left{
+		left:.5em;
+	}
+	
+	body.login-screen #loginForm\:loginPanel button.login-button{
+		max-height:40px;
+	}
+}
+
+
+
+/**********************************************************************
+		ABOUT DIALOGUE
+***********************************************************************/
+body.about-dlg #about-panel #about-header{
+	height:150px;
+	text-align:center;
+	padding:40px;
+}
+
+body.about-dlg #about-panel #about-content{
+	background: #000000;
+	padding: 20px 40px;
+}
+
+#about-content *{
+	color:#FFFFFF;
+	font-size:0.96em;
+}
+
+#about-footer{
+	background: url('images/checker-bkg.png') 75px top;
+	height:200px !important;
+}
+
+#about-footer #logo-container{
+	height:160px;
+	background: url('images/embotics-logo.svg') no-repeat center center;
+	background-size: 260px;
+	margin:0px auto;
+}
+
+#header-form\:about_dlg.ui-dialog .ui-widget-header{
+	background: #FFFFFF;
+}
+
+#header-form\:about_dlg.ui-dialog .ui-widget-header .ui-dialog-title{
+	display:none;
+}
+
+#header-form\:about_dlg.ui-dialog .ui-widget-header .ui-dialog-titlebar-close {
+	background: #f16531;
+}
+
+.emb-init{
+	border-radius: 5px 5px 0 7px;
+}
+
+.emb-init.ui-panel .ui-panel-content{
+	border:none;
+}
+
+.emb-app-header {
+	background: #ff6e2a !important; 
+}
+
+
+/****************************************************
+   MAIN NAVIGATION MENU
+*****************************************************/
+#main-nav-form\:navmenu{
+	background:transparent;
+}
+
+#main-nav-form\:navmenu li{
+	margin:0px;
+}
+
+#main-nav-panel .ui-menu a.ui-menuitem-link{
+	border-bottom:1px solid #FFFFFF;
+	border-right:0px solid #FFFFFF;
+	border-radius:0px;
+	background: #1A1A1A;
+	color:#FFFFFF;
+	width:100%;
+	padding:8px 8px;
+	/*height: 40px;
+	min-width:40px;*/
+}
+
+
+#main-nav-panel .ui-menu a.ui-menuitem-link.ui-state-hover{
+	background:#4F4F4F;
+}
+
+#main-nav-panel .ui-menu a.ui-menuitem-link.ui-state-active {
+	background:#ff6e2a;
+}
+
+#main-nav-panel .ui-menu .ui-menu-list > li:last-child a.ui-menuitem-link{
+	border-bottom:none;
+}
+
+#main-nav-panel .ui-menu a.emb-menu-toggle{
+	background:#777;
+	border-radius: 0 0 0 6px;
+}
+
+.minimized #main-nav-panel .ui-menu a.emb-menu-toggle:hover{
+	width:40px;
+}
+
+/****************************************************************
+	HEADER
+*****************************************************************/
+#header-form\:empowered-logo,
+#empowered-logo{
+	background-image: url('../../images/embotics-logo.svg');
+}
+
+/*****************************************************************
+     USER MENU
+*****************************************************************/
+.emb-user {
+	text-decoration: none; 
+	color: #ffffff;
+}
+
+.ui-widget-content a.emb-user {
+	color: #ffffff;
+	outline: none;
+}
+
+.emb-usermenu{
+	background: #ffffff; 
+}
+
+/*****************************************************************
+	ORG SELECT MENU
+*****************************************************************/
+.emb-app-header #header-form\:orgSelect{
+	background:	#ff6e2a;
+	height: 34px;
+}
+
+#header-form\:orgSelect_panel{
+	width:240px;
+}
+
+.emb-app-header .ui-selectonemenu-trigger{
+	background:	#ff6e2a;
+}
+
+.emb-app-header .ui-selectonemenu-trigger .ui-icon{
+	background:transparent;
+	display:inline;
+}
+
+.emb-app-header .ui-selectonemenu-trigger .ui-icon::after{
+	color:#FFFFFF;
+}
+
+.emb-app-header .ui-selectonemenu .ui-selectonemenu-label{
+	color:#FFFFFF;
+	background: transparent;
+}
+
+
+/*****************************************************************
+     MENU TOGGLER
+******************************************************************/
+
+.emb_toggle{
+	background:#ECECEC;
+	color:#555555;
+	border-radius:3px 0 0 3px;
+}
+
+.emb_toggle:hover{
+	background:#FEFEFE;
+}
+
+/*****************************************************************
+		TOOLBAR
+******************************************************************/
+
+.ui-toolbar .emb-search-input{
+	margin-right:50px;
+	margin-top:15px;
+	float:left;
+}
+
+/******************************************************************
+		DASHBOARD
+*******************************************************************/
+.ui-toolbar#dashboard\:dashboard-toolbar{
+	padding-bottom:0px;
+	padding-right: 7px;
+}
+
+.emb-performance-widget #dashboard\:widget-performance\:notification{
+	padding: 2px;
+	text-align:center;
+}
+
+.emb-performance-widget #dashboard\:widget-performance\:notification .fa{
+	font-size:1.3em;
+	margin-right:7px;
+}
+
+.emb-performance-widget #dashboard\:widget-performance\:notification a:link,
+.emb-performance-widget #dashboard\:widget-performance\:notification a:visited{
+	font-size:0.9em;
+}
+
+#widget-vmtree .ui-treenode-label{
+	color: #777777;
+}
+
+#dashboard\:widget-quota\:quota-stats-text .emb-flex-chart-container.row > div{
+	flex: 0 1 49%;
+}
+
+/******************************************************************
+	Shopping basket
+*******************************************************************/
+
+.emb-basket-table {
+	width:70%;
+}
+
+.emb-basket-table .emb-basket-desc {
+	color: #999999;
+	display:block;
+	font-size:0.9em;
+}
+
+/******************************************************************
+	UI Constructs
+*******************************************************************/
+.emb-os-template .emb-icon,
+.emb-db-template .emb-icon{
+	width:24px;
+	height:24px;
+	margin-right:7px;
+}
+
+.emb-os-template span{
+	vertical-align: middle;
+	color:#777;
+}
+
+.emb-stack-template{
+	
+}
+
+.emb-db-template span{
+	vertical-align: middle;
+}
+
+.emb-db-template small{
+	color:#777;
+	display:block;	
+	margin-left: 32px;
+    margin-top: -6px;
+}
+
+.emb-stack-template span{
+	color:#777;
+	font-size:0.9em;
+}
+
+span.emb-disconnected,
+.ui-widget a.emb-disconnected {
+	color: #999999;
+}
+
+.ui-state-highlight a.emb-disconnected,
+.ui-state-highlight .emb-os-template span,
+.ui-state-highlight .emb-stack-template span,
+.ui-state-highlight .emb-db-template small{
+	color:#FFFFFF;
+}
+
+.emb-credential-input{
+	width:225px;
+}
+
+.ui-messages-error-detail {
+	display:block;
+}
+
+/******************************************************************
+	Request Details
+*******************************************************************/
+
+.emb-service-card {
+	/*box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+	border:1px solid #E6E6E6;*/
+}
+
+.emb-services .ui-datascroller-content,
+.emb-service-card .ui-panel-content {
+	padding: 0;	
+}
+
+.emb-request-title {
+	float: left;
+	white-space: normal; 
+	width: 400px;
+}
+
+.emb-state.fa {
+	display: inline-block;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.emb-request .ui-panel-title {
+	margin: 0;
+}
+
+.emb-request .ui-icon-plusthick {
+	background-position: -64px 0px;
+}
+
+.emb-request .ui-icon-minusthick {
+	background-position: 0px 0px;
+}
+
+.emb-services .ui-panel-titlebar {
+	padding-bottom: 25px;
+}
+
+.emb-component-panel .ui-panel-titlebar {
+	padding-bottom: 15px;
+}
+
+.emb-service-panel-content {
+	padding: 10px 20px;
+}
+
+.emb-component-panel .ui-panel {
+	border: 0px;
+	margin: 0;
+}
+
+.emb-request-state {
+	font-family: verdana, arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.emb-request-values {
+	white-space: normal; 
+	width: 260px;
+}
+
+.emb-form-summary.ui-panel-content {
+	border:1px solid #B3B3B3;	
+}
+
+
+/******************************************************************
+	VM Details
+*******************************************************************/
+.emb-vm-command-button.ui-state-default{
+	/*background: white !important;
+	color: #555555 !important;*/
+}
+
+.emb-vm-command-button.ui-state-hover,
+.emb-vm-command-button.ui-state-active{
+	/*background: white !important;
+	color: #FF6E2A !important;*/
+}
+
+.emb-vm-accordion-button.ui-state-default {
+	/*background: #BBBBBB !important;
+	color: black !important;*/
+}
+
+.emb-vm-accordion-button.ui-state-hover, 
+.emb-vm-accordion-button.ui-state-active{
+	/*background: #BBBBBB !important;
+	color: #FF6E2A !important;*/
+}
+
+.emb-header-tab-buttons{
+	height:46px;
+	top:-12px;
+}
+
+button.ui-button.emb-vm-accordion-button{
+	height:46px;
+	position:relative;
+	
+	/*margin-top:-12px;
+	margin-bottom: -12px;*/
+}
+
+button.ui-button.emb-vm-accordion-button .ui-icon{
+	font-size:1.2em !important;
+}
+
+
+button.ui-button.emb-vm-accordion-button.ui-state-selected{
+	background: #FF6E2A !important;
+}
+
+#service-form\:commandsMenu_menu .ui-menu-list,
+#form\:serviceList\:commandsMenu_menu .ui-menu-list{
+	max-height:550px;
+	overflow-x:hidden;
+	overflow-y:auto;	
+}
+
+#service-form\:puppet-configurationdata-panel > table td.ui-panelgrid-cell,
+#service-form\:chef-configurationdata-panel > table td.ui-panelgrid-cell{
+	padding-left:2px;
+	
+}
+
+.emb-info-overlay,
+.ui-panelgrid .ui-widget-content .emb-info-overlay{
+	border:1px solid #E5E5E5 !important;
+	
+}
+
+@media (min-width: 1024px){
+	.emb-vm-accordion-button{
+		width: 70px;
+	}
+	
+	button.ui-button.emb-vm-accordion-button .ui-icon{
+		position:absolute;
+		width:100% !important;
+		text-align:center;
+		top:4px;
+	}
+
+	button.ui-button.emb-vm-accordion-button .ui-button-text{
+		display:inline-block;
+		position:absolute;
+		text-align:center;
+		width:100%;
+		left:0px;
+		top:25px;
+	}
+}
+
+.emb-vm-accordion-button .ui-icon {
+	left: .0em !important;
+}
+
+.emb-vm-accordion-text{
+	color: #BBBBBB;
+}
+
+.emb-vmExternalPage{
+	height:750px; 
+	width: 100%;	
+}
+
+/**************************************************
+	SHARE VM
+**************************************************/
+.emb-page-sharevm #share-vm\:share-with{
+	margin-bottom:7px;
+	
+}
+
+.emb-page-sharevm #share-vm\:recipients{
+	width:300px; 
+	margin-bottom:7px;
+	height:120px;
+}
+
+.emb-page-sharevm #share-vm\:add-user{
+	width: calc(100% - 35px);
+}
+
+.emb-page-sharevm #share-vm\:add-user-btn{
+	float:right;
+}
+
+.emb-page-sharevm #share-vm\:users-table-container{
+	margin-top:5px;
+	margin-bottom:7px;
+	height:calc(100% - 30px);
+	overflow-y: auto;
+}
+
+.emb-page-sharevm #share-vm\:users-table label{
+	margin-left:5px;
+	text-align:left;
+	width:calc(100% - 30px);
+	float:left;
+}
+
+/*********************************************************
+	RIGHTSIZING PAGE
+*********************************************************/
+@media screen and (min-width: 1024px){
+	.emb-page-rightsizing #form\:rightsizingTable\:apply-menu .ui-button-text,
+	#service-form\:rightsizingTable\:apply-menu_button .ui-button-text {
+		max-width: 225px;
+	}
+	
+	.emb-page-rightsizing #form\:rightsizingTable\:apply-menu_button {
+		min-width: 268px;
+	}
+	
+	#service-form\:rightsizingTable\:apply-menu_button {
+		min-width: 230px;
+	}
+	
+	#service-form\:rightsizingTable {
+		overflow-x: hidden !important;
+	}
+	
+	.emb-page-rightsizing .emb-split-button-item {
+	    min-width: 287px;
+	    max-width: 287px;
+	}
+	
+	.emb-page-rightsizing #form\:rightsizingTable .emb-actions-box .emb-search-box .icon-and-input input {
+		min-width: 270px;
+	}
+}
+
+/*****************************************************************
+	SEARCH PAGE
+******************************************************************/
+/* TODO move to correct file */
+.emb-search-type-select{
+	width:calc(100% - 4px);
+	/*white-space:nowrap;
+	margin-right:0px;*/
+}
+
+/*.emb-search-type-container {
+	width:100%;
+}*/
+
+.emb-search-type-container td {
+	background:#EEEEEE;
+}
+
+.emb-search-type-container button {
+	margin: 0px 0px 10px 0px;
+	clear: both;
+}
+
+.emb-search-type-container .ui-datascroller .ui-datascroller-content,
+.emb-search-type-container .ui-datascroller .ui-datascroller-loader {
+	padding:0;
+}
+
+.ui-panelgrid-cell.emb-search-type-title {
+	padding: 0;
+	text-align: right;
+}
+
+.ui-panelgrid-cell.emb-search-type-selection {
+	padding: 0px;
+}
+
+.emb-report-type {
+	padding: 35px 10px 0px 0px;
+}
+
+.emb-select-filters {
+	padding: 15px 10px 0px 0px;
+}
+
+.emb-search-separator {
+	height: 5px; 
+	background: #FFFFFF;
+}
+
+.emb-search-filters {
+	padding: 10px 20px 10px 0px;
+}
+
+.emb-search-filter {
+	/*width: 100%;*/
+	background: #EEEEEE;
+	/*padding-bottom: 10px;
+	min-height: 38px;*/
+}
+
+.emb-search-subfilters {
+	padding: 10px 10px 0px 10px;
+	background: #EEEEEE;
+	border:1px solid #B3B3B3;
+	border-radius: 5px;
+}
+
+.emb-search-subfilters .ui-datascroller-content {
+	overflow: hidden;
+}
+
+
+.emb-search-type-container .ui-message-error,
+.emb-search-filter .ui-message-error{
+	width: 100%;
+	margin-bottom: 8px;
+	margin-top:8px;
+	float:left;
+	clear:left;
+}
+
+.emb-search-filter .ui-datascroller-content,
+.emb-search-filter .ui-datascroller-loader {
+	padding:0px;
+}
+
+/*.emb-search-type-select .ui-button.ui-state-default{
+	height:80px;
+	width:25%;
+	padding:15px 20px;
+	margin-left:1px;
+}*/
+
+.emb-search-type-select .ui-state-disabled {
+    display: none;
+}
+
+/** "font-size" and below taken from fa-lg style class */
+.emb-search-table span.fa {
+	padding-right: 5px;
+	font-size: 1.33333333em; 
+	line-height: 0.75em;
+	vertical-align: -15%;
+}
+
+.emb-search-table span.emb-graphic {
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+	vertical-align: -15%;
+}
+
+.emb-search-table span.emb-graphic+span.emb-search-property {
+	vertical-align: 3px;
+}
+
+.emb-page-search .emb-flex .ui-panel-content,
+.emb-page-comparediff .emb-flex .ui-panel-content,
+.emb-page-editadhocreport .emb-flex .ui-panel-content{
+	height: calc(100% - 60px);
+}
+
+.emb-page-search .ui-auto-scroll-height,
+.emb-page-editadhocreport .ui-auto-scroll-height{
+	flex: 1 1 210px;
+}
+
+.emb-page-services.ui-auto-scroll-height{
+	flex: 1 1 50px;
+}
+
+
+.emb-search-column-picker {
+	width: 100%;
+}
+
+.emb-search-column-picker .emb-search-column-picker-item {
+	padding-left: 15px;
+}
+
+.emb-expand,
+.emb-collapse {
+	cursor: pointer;
+
+}
+
+/*****************************************************************
+	View/Set Custom Attributes
+******************************************************************/
+
+.emb-attribute-management-nocapanel {
+	height: 100px; 
+	padding-top: 20px;
+}
+
+.emb-attribute-management-capanel-large {
+	height: 500px;
+	width: 600px;
+}
+
+.emb-attribute-management-capanel-small {
+	height: 100%;
+	width: 600px;
+}
+
+.emb-attribute-management-capanel table{
+	width: 100%;
+	border-spacing:1px;
+}
+
+.emb-attribute-management-error .ui-message {
+    /*width: 330px;*/
+    margin-left:0px;
+    margin-right:0px;
+}
+
+/*****************************************************************
+	View/Set vApp Start Order
+******************************************************************/
+.emb-vapp-startorder-novmspanel {
+	height: 100px; 
+	padding-top: 20px;
+}
+
+.emb-vapp-startorder-list .ui-picklist-source-filterholder,
+.emb-vapp-startorder-list .ui-picklist-target-filterholder {
+	display: none;
+}
+
+.emb-vapp-startorder-list .ui-picklist-source {
+	display: none;
+}
+
+.emb-vapp-startorder-list .ui-picklist-target {
+	padding: 8px;
+	height: 350px;
+	width: 440px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.emb-vapp-startorder-list .ui-picklist-buttons .ui-picklist-button-add,
+.emb-vapp-startorder-list .ui-picklist-buttons .ui-picklist-button-add-all,
+.emb-vapp-startorder-list .ui-picklist-buttons .ui-picklist-button-remove,
+.emb-vapp-startorder-list .ui-picklist-buttons .ui-picklist-button-remove-all,
+.emb-vapp-startorder-list .ui-picklist-buttons .ui-picklist-button-move-top,
+.emb-vapp-startorder-list .ui-picklist-buttons .ui-picklist-button-move-bottom {
+ 	display : none;
+}
+
+.emb-vapp-startorder-list .ui-picklist-buttons {
+	padding-left: 0px;
+    padding-right: 0px;
+}
+
+.emb-vapp-startorder-list .ui-picklist-buttons .ui-picklist-buttons-cell .ui-button.ui-state-disabled{
+	display:none;
+}
+
+.emb-vapp-startorder-infopanel {
+	margin: 5px 30px 15px 15px;
+}
+
+/******************************************************************
+	USERS & ORG PAGE
+******************************************************************/
+#organization\:organizationTable{
+	height: calc(100% - 250px);
+}
+
+/******************************************************************
+	Multi-Select Control
+*******************************************************************/
+.emb-form-control .emb-picklist-default-values {
+	text-align: left;
+	width:auto;
+}
+
+.emb-picklist-default-values {
+	width: 460px;
+	max-width:460px;
+	word-wrap: break-word;
+	font-weight: bold;
+}
+
+.emb-multiselect-list-sourceonly .ui-picklist-source {
+	padding: 5px 5px 5px 5px;
+	width: 460px;
+}
+
+.emb-multiselect-list-sourceonly .ui-picklist-target {
+	display:none;
+}
+
+.emb-multiselect-list-sourceonly .ui-picklist-buttons {
+	display:none;
+}
+
+.emb-single-select {
+	width: 460px;
+}
+
+/* Fix for IE where the table width is ridiculous */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.emb-multiselect-control .ui-datatable .ui-datatable-scrollable-body {
+		width:400px;
+	}
+}
+
+/* Removes scrollbar in table */
+.emb-multiselect-control .ui-datatable .ui-datatable-scrollable-body {
+	overflow:hidden;
+}
+
+/***********************************************************************
+	Compare VMs
+************************************************************************/
+.emb-compare-warnings {
+	font-weight: normal; 
+}
+
+.emb-compare-warnings .fa-warning {
+	font-size: 1.5em; 
+	margin-right: 5px;
+}
+
+.emb-compare-warnings div {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/***********************************************************************
+	HELP
+************************************************************************/
+#helpButton.ui-button{
+	padding:0px;
+}
+
+/************************************************************************
+	FLEXBOX FIX FOR IE 10
+************************************************************************/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+	.ui-treetable.ui-treetable-scrollable{
+		display: -ms-flexbox;
+		-ms-flex-direction: column;
+		width:100%;
+	}		
+	
+	.ui-treetable-scrollable-header,
+	.ui-treetable-scrollable-footer{
+		-ms-flex:0 0 auto;
+	}
+	
+	.ui-datatable.ui-datatable-scrollable{
+		display:-ms-flexbox;
+		-ms-flex-direction: column;
+		width:100%;
+	}
+	
+	.ui-datatable-scrollable-header{
+		-ms-flex:0 0 auto;
+		background:#00ff00;
+	}
+}
+
+
