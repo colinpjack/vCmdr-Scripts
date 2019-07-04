@@ -21,7 +21,7 @@ Invoke-WebRequest -uri https://github.com/Embotics/Plug-in-Workflow-Steps/raw/ma
 Write-Output "Pulling Text Plugins"
 Invoke-WebRequest -uri https://github.com/Embotics/Plug-in-Workflow-Steps/raw/master/text/wfplugins-text-1.0.jar -Outfile c:\progra~1\embotics\vcommander\tomcat\wfplugins\wfplugins-text-1.0.jar
 Invoke-WebRequest -uri https://github.com/Embotics/Plug-in-Workflow-Steps/raw/master/text/wfplugins-text-1.1.jar -Outfile c:\progra~1\embotics\vcommander\tomcat\wfplugins\wfplugins-text-1.1.jar
-
+Invoke-WebRequest -uri https://github.com/Embotics/Plug-in-Workflow-Steps/blob/master/awsruncmd/wfplugins-awsrunoscommand-1.0.jar -Outfile c:\progra~1\embotics\vcommander\tomcat\wfplugins\wfplugins-awsrunoscommand-1.0.jar
 
 
 #K8s
